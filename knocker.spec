@@ -2,7 +2,7 @@ Summary:	Simple port scanner
 Summary(pl):	Prosty skaner portów
 Name:		knocker
 Version:	0.7.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 URL:		http://knocker.sourceforge.net/
@@ -33,10 +33,9 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install src/knocker	$RPM_BUILD_ROOT%{_bindir}
-install docs/knocker.1	$RPM_BUILD_ROOT%{_mandir}/man1
+%{__make} install \
+    DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,5 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/knocker
-%doc ChangeLog AUTHORS BUGS TO-DO
+%doc ChangeLog AUTHORS BUGS TO-DO NEWS README
 %{_mandir}/man1/*
