@@ -7,6 +7,7 @@ License:	GPL
 Group:		Networking/Utilities
 URL:		http://knocker.sourceforge.net/
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
+# Source0-md5:	53d1a036071ceccb6500c0292feafacd
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
