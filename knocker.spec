@@ -2,7 +2,7 @@ Summary:	Simple port scanner
 Summary(pl):	Prosty skaner portów
 Name:		knocker
 Version:	0.7.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/knocker/%{name}-%{version}.tar.gz
