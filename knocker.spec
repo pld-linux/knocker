@@ -5,9 +5,9 @@ Version:	0.7.1
 Release:	2
 License:	GPL
 Group:		Networking/Utilities
-URL:		http://knocker.sourceforge.net/
-Source0:	http://dl.sourceforge.net/sourceforge/knocker/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/knocker/%{name}-%{version}.tar.gz
 # Source0-md5:	53d1a036071ceccb6500c0292feafacd
+URL:		http://knocker.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,7 +23,6 @@ Knocker jest prostym, uniwersalnym i ³atwym w u¿yciu skanerem portów.
 %setup -q
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
@@ -35,7 +34,7 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-    DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
