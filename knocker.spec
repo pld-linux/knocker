@@ -3,12 +3,11 @@ Summary(pl):	Prosty skaner portów
 Name:		knocker
 Version:	0.7.1
 Release:	3
-License:	GPL
+License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/knocker/%{name}-%{version}.tar.gz
 # Source0-md5:	53d1a036071ceccb6500c0292feafacd
-Source1:	http://www.mbsoftware.boo.pl/knocker/%{name}-polish-man-page.tar.gz
-# Source1-md5:	a3ea62d930e98698885ef417ea653e8b
+Source1:	%{name}.1.pl
 URL:		http://knocker.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -22,7 +21,7 @@ scanner written in C
 Knocker jest prostym, uniwersalnym i ³atwym w u¿yciu skanerem portów.
 
 %prep
-%setup -q -a1
+%setup -q
 
 %build
 %{__aclocal}
@@ -34,10 +33,11 @@ Knocker jest prostym, uniwersalnym i ³atwym w u¿yciu skanerem portów.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_mandir}/pl/man1
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-cp -r pl/ $RPM_BUILD_ROOT%{_mandir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/pl/man1/knocker.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -47,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 %doc AUTHORS BUGS ChangeLog NEWS README TO-DO
 %{_mandir}/man1/*
-%{_mandir}/pl/man1/*
+%lang(pl) %{_mandir}/pl/man1/*
