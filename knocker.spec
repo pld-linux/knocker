@@ -42,6 +42,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/knocker
-%doc ChangeLog AUTHORS BUGS TO-DO NEWS README
+%attr(755,root,root) %{_bindir}/%{name}
+%doc AUTHORS BUGS ChangeLog NEWS README TO-DO
 %{_mandir}/man1/*
