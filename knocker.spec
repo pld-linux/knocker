@@ -1,5 +1,5 @@
 Summary:	Simple port scanner
-Summary(pl):	Prosty skaner portÛw
+Summary(pl.UTF-8):   Prosty skaner port√≥w
 Name:		knocker
 Version:	0.7.1
 Release:	3
@@ -17,8 +17,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Knocker is a simple, versatile, and easy-to-use TCP security port
 scanner written in C
 
-%description -l pl
-Knocker jest prostym, uniwersalnym i ≥atwym w uøyciu skanerem portÛw.
+%description -l pl.UTF-8
+Knocker jest prostym, uniwersalnym i ≈Çatwym w u≈ºyciu skanerem port√≥w.
 
 %prep
 %setup -q
