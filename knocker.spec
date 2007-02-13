@@ -1,5 +1,5 @@
 Summary:	Simple port scanner
-Summary(pl.UTF-8):   Prosty skaner portów
+Summary(pl.UTF-8):	Prosty skaner portów
 Name:		knocker
 Version:	0.7.1
 Release:	3
